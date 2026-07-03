@@ -1,12 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CCSP Norte</title>
+<title>Copa Capital SP Norte</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body style="background:#111;color:white;font-family:Arial;text-align:center;padding-top:100px;">
-<h1>COPA CAPITAL SÃO PAULO NORTE</h1>
-<p>Em breve o maior campeonato da Zona Norte.</p>
+
+<body>
+
+<header>
+  <img src="logo.png" class="logo">
+  <h1>COPA CAPITAL SP NORTE</h1>
+  <p>Competição oficial de futsal amador</p>
+</header>
+
+<nav>
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('teams')">Equipes</button>
+  <button onclick="show('table')">Tabela</button>
+  <button onclick="show('matches')">Jogos</button>
+  <button onclick="show('rules')">Regulamento</button>
+  <button onclick="show('news')">Notícias</button>
+</nav>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <h2>Bem-vindo</h2>
+
+  <div class="cards">
+    <div>18 equipes</div>
+    <div>25 jogos</div>
+    <div>Fase de grupos + mata-mata</div>
+    <div>Premiação R$ 3.500</div>
+  </div>
+
+  <p class="muted">Contagem regressiva: EM BREVE</p>
+</section>
+
+<!-- EQUIPES -->
+<section id="teams" class="page">
+  <h2>Equipes</h2>
+  <ul>
+    <li>Time A</li>
+    <li>Time B</li>
+    <li>Time C</li>
+    <li>Em breve novos times</li>
+  </ul>
+</section>
+
+<!-- TABELA -->
+<section id="table" class="page">
+  <h2>Tabela</h2>
+
+  <table>
+    <tr>
+      <th>Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th>
+    </tr>
+
+    <tr>
+      <td>Time A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+
+    <tr>
+      <td>Time B</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+  </table>
+
+  <p class="muted">Atualização em breve</p>
+</section>
+
+<!-- JOGOS -->
+<section id="matches" class="page">
+  <h2>Jogos</h2>
+
+  <div class="match">
+    <p>Time A vs Time B</p>
+    <span>Em breve</span>
+  </div>
+
+  <div class="match">
+    <p>Time C vs Time D</p>
+    <span>Em breve</span>
+  </div>
+</section>
+
+<!-- REGULAMENTO -->
+<section id="rules" class="page">
+  <h2>Regulamento</h2>
+
+  <p>
+    - Vitória: 3 pontos<br>
+    - Empate: 1 ponto<br>
+    - Derrota: 0 pontos<br>
+    - Mata-mata após fase de grupos<br>
+    - Critério: saldo de gols
+  </p>
+</section>
+
+<!-- NOTICIAS -->
+<section id="news" class="page">
+  <h2>Notícias</h2>
+
+  <div class="news-card">
+    <h3>Campeonato em preparação</h3>
+    <p>Em breve mais informações oficiais.</p>
+  </div>
+
+  <div class="news-card">
+    <h3>Equipes sendo confirmadas</h3>
+    <p>Sua equipe pode participar.</p>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
