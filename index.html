@@ -1,122 +1,158 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copa Capital SP Norte</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa Capital São Paulo Norte - CCSP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-  <h1>COPA CAPITAL SP NORTE</h1>
-  <p>Competição oficial de futsal amador</p>
-</header>
+    <!-- NAV BAR -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#" class="active">Início</a>
+                <a href="#">Competição</a>
+                <a href="#">Equipes</a>
+                <a href="#">Atletas</a>
+            </div>
+            <div class="logo">
+                <img src="logo-ccsp.png" alt="CCSP Norte Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#">Notícias</a>
+                <a href="#">Galeria</a>
+                <a href="#">Patrocinadores</a>
+                <a href="#">Contato</a>
+            </div>
+        </nav>
+    </header>
 
-<nav>
-  <button onclick="show('home')">Home</button>
-  <button onclick="show('teams')">Equipes</button>
-  <button onclick="show('table')">Tabela</button>
-  <button onclick="show('matches')">Jogos</button>
-  <button onclick="show('rules')">Regulamento</button>
-  <button onclick="show('news')">Notícias</button>
-</nav>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h3>COPA CAPITAL</h3>
+            <h1>SÃO PAULO <br><span>NORTE</span></h1>
+            <p>Mais que um campeonato, uma paixão que nos une!</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-green">Inscreva sua Equipe</a>
+                <a href="#" class="btn-outline">Saiba Mais</a>
+            </div>
+        </div>
+        
+        <!-- COUNTDOWN -->
+        <div class="countdown-container">
+            <p class="countdown-title">CONTAGEM REGRESSIVA PARA O INÍCIO</p>
+            <div class="countdown">
+                <div class="time-box"><span>24</span><small>DIAS</small></div>
+                <div class="time-box"><span>15</span><small>HORAS</small></div>
+                <div class="time-box"><span>37</span><small>MINUTOS</small></div>
+                <div class="time-box"><span>52</span><small>SEGUNDOS</small></div>
+            </div>
+        </div>
+    </section>
 
-<main>
+    <!-- MAIN CONTENT GRID -->
+    <main class="container">
+        
+        <!-- PRÓXIMOS JOGOS -->
+        <section class="card-section dynamic-grid">
+            <div class="box games">
+                <div class="box-header">
+                    <h2>Próximos Jogos</h2>
+                    <a href="#">Ver todos ></a>
+                </div>
+                <div class="game-row">
+                    <span class="date">25 MAI<br><small>DOM</small></span>
+                    <span class="hour">09:00</span>
+                    <div class="matchup">
+                        <span>FÚRIA FC</span>
+                        <span class="vs">VS</span>
+                        <span>UNIÃO ZN</span>
+                    </div>
+                </div>
+                <div class="game-row">
+                    <span class="date">25 MAI<br><small>DOM</small></span>
+                    <span class="hour">11:00</span>
+                    <div class="matchup">
+                        <span>REAL NORTE</span>
+                        <span class="vs">VS</span>
+                        <span>VILA NOVA</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- HOME -->
-<section id="home" class="page active">
-  <h2>Bem-vindo</h2>
+            <!-- CLASSIFICAÇÃO -->
+            <div class="box leaderboard">
+                <div class="box-header">
+                    <h2>Classificação</h2>
+                    <a href="#">Ver tabela completa ></a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th># EQUIPE</th>
+                            <th>P</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 🥇 Fúria FC</td>
+                            <td>12</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>2 🥈 União ZN</td>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>3 🥉 Real Norte</td>
+                            <td>9</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-  <div class="cards">
-    <div>18 equipes</div>
-    <div>25 jogos</div>
-    <div>Fase de grupos + mata-mata</div>
-    <div>Premiação R$ 3.500</div>
-  </div>
+    </main>
 
-  <p class="muted">Contagem regressiva: EM BREVE</p>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Sobre a CCSP Norte</h3>
+                <p>A Copa Capital São Paulo Norte é mais que uma competição, é a celebração do esporte e da união regional.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Classificação</a></li>
+                    <li><a href="#">Notícias</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>📞 (11) 91234-5678</p>
+                <p>✉️ contato@ccspnorte.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CCSP Norte - Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<!-- EQUIPES -->
-<section id="teams" class="page">
-  <h2>Equipes</h2>
-  <ul>
-    <li>Time A</li>
-    <li>Time B</li>
-    <li>Time C</li>
-    <li>Em breve novos times</li>
-  </ul>
-</section>
-
-<!-- TABELA -->
-<section id="table" class="page">
-  <h2>Tabela</h2>
-
-  <table>
-    <tr>
-      <th>Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th>
-    </tr>
-
-    <tr>
-      <td>Time A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-    </tr>
-
-    <tr>
-      <td>Time B</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-    </tr>
-  </table>
-
-  <p class="muted">Atualização em breve</p>
-</section>
-
-<!-- JOGOS -->
-<section id="matches" class="page">
-  <h2>Jogos</h2>
-
-  <div class="match">
-    <p>Time A vs Time B</p>
-    <span>Em breve</span>
-  </div>
-
-  <div class="match">
-    <p>Time C vs Time D</p>
-    <span>Em breve</span>
-  </div>
-</section>
-
-<!-- REGULAMENTO -->
-<section id="rules" class="page">
-  <h2>Regulamento</h2>
-
-  <p>
-    - Vitória: 3 pontos<br>
-    - Empate: 1 ponto<br>
-    - Derrota: 0 pontos<br>
-    - Mata-mata após fase de grupos<br>
-    - Critério: saldo de gols
-  </p>
-</section>
-
-<!-- NOTICIAS -->
-<section id="news" class="page">
-  <h2>Notícias</h2>
-
-  <div class="news-card">
-    <h3>Campeonato em preparação</h3>
-    <p>Em breve mais informações oficiais.</p>
-  </div>
-
-  <div class="news-card">
-    <h3>Equipes sendo confirmadas</h3>
-    <p>Sua equipe pode participar.</p>
-  </div>
-</section>
-
-</main>
-
-<script src="script.js"></script>
 </body>
 </html>
