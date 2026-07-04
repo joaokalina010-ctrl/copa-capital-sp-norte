@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- NAV BAR -->
     <header>
         <nav class="navbar">
             <div class="nav-links">
@@ -18,7 +17,7 @@
                 <a href="#">Atletas</a>
             </div>
             <div class="logo">
-                <img src="logo-ccsp.png" alt="CCSP Norte Logo">
+                <img src="https://via.placeholder.com/120x120/000000/00ff66?text=CCSP+LOGO" alt="CCSP Norte Logo">
             </div>
             <div class="nav-links">
                 <a href="#">Notícias</a>
@@ -29,19 +28,17 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
             <h3>COPA CAPITAL</h3>
-            <h1>SÃO PAULO <br><span>NORTE</span></h1>
-            <p>Mais que um campeonato, uma paixão que nos une!</p>
+            <h1>SÃO PAULO <br><span class="gold-text">NORTE</span></h1>
+            <p>Mais que um campeonato, uma <span class="green-text">paixão</span> que nos une!</p>
             <div class="hero-buttons">
                 <a href="#" class="btn-green">Inscreva sua Equipe</a>
-                <a href="#" class="btn-outline">Saiba Mais</a>
+                <a href="#" class="btn-outline">Saiba Mais ></a>
             </div>
         </div>
         
-        <!-- COUNTDOWN -->
         <div class="countdown-container">
             <p class="countdown-title">CONTAGEM REGRESSIVA PARA O INÍCIO</p>
             <div class="countdown">
@@ -53,104 +50,207 @@
         </div>
     </section>
 
-    <!-- MAIN CONTENT GRID -->
-    <main class="container">
+    <main class="main-grid">
         
-        <!-- PRÓXIMOS JOGOS -->
-        <section class="card-section dynamic-grid">
-            <div class="box games">
-                <div class="box-header">
-                    <h2>Próximos Jogos</h2>
-                    <a href="#">Ver todos ></a>
-                </div>
-                <div class="game-row">
-                    <span class="date">25 MAI<br><small>DOM</small></span>
-                    <span class="hour">09:00</span>
-                    <div class="matchup">
-                        <span>FÚRIA FC</span>
-                        <span class="vs">VS</span>
-                        <span>UNIÃO ZN</span>
-                    </div>
-                </div>
-                <div class="game-row">
-                    <span class="date">25 MAI<br><small>DOM</small></span>
-                    <span class="hour">11:00</span>
-                    <div class="matchup">
-                        <span>REAL NORTE</span>
-                        <span class="vs">VS</span>
-                        <span>VILA NOVA</span>
-                    </div>
+        <div class="box dynamic-card">
+            <div class="box-header">
+                <h2>Próximos Jogos</h2>
+                <a href="#" class="see-all">Ver todos ></a>
+            </div>
+            
+            <div class="game-row">
+                <div class="game-date">25<br><small>MAI</small><br><span class="day">DOM</span></div>
+                <div class="game-time">09:00</div>
+                <div class="matchup">
+                    <div class="team text-right">FÚRIA FC <span class="badge-placeholder">🛡️</span></div>
+                    <div class="vs">VS</div>
+                    <div class="team text-left"><span class="badge-placeholder">🛡️</span> UNIÃO ZN</div>
                 </div>
             </div>
 
-            <!-- CLASSIFICAÇÃO -->
-            <div class="box leaderboard">
-                <div class="box-header">
-                    <h2>Classificação</h2>
-                    <a href="#">Ver tabela completa ></a>
+            <div class="game-row">
+                <div class="game-date">25<br><small>MAI</small><br><span class="day">DOM</span></div>
+                <div class="game-time">11:00</div>
+                <div class="matchup">
+                    <div class="team text-right">REAL NORTE <span class="badge-placeholder">🛡️</span></div>
+                    <div class="vs">VS</div>
+                    <div class="team text-left"><span class="badge-placeholder">🛡️</span> VILA NOVA</div>
                 </div>
+            </div>
+
+            <div class="game-row">
+                <div class="game-date">25<br><small>MAI</small><br><span class="day">DOM</span></div>
+                <div class="game-time">13:00</div>
+                <div class="matchup">
+                    <div class="team text-right">INDEPENDENTE <span class="badge-placeholder">🛡️</span></div>
+                    <div class="vs">VS</div>
+                    <div class="team text-left"><span class="badge-placeholder">🛡️</span> NOVA ERA</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box dynamic-card">
+            <div class="box-header">
+                <h2>Classificação</h2>
+                <a href="#" class="see-all">Ver tabela completa ></a>
+            </div>
+            <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
-                            <th># EQUIPE</th>
+                            <th class="text-left"># EQUIPE</th>
                             <th>P</th>
                             <th>J</th>
                             <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
                             <th>SG</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1 🥇 Fúria FC</td>
-                            <td>12</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>11</td>
+                        <tr class="g4">
+                            <td class="text-left"><span class="pos">1</span> 🛡️ FÚRIA FC</td>
+                            <td>12</td><td>4</td><td>4</td><td>0</td><td>0</td><td>13</td><td>2</td><td>11</td>
+                        </tr>
+                        <tr class="g4">
+                            <td class="text-left"><span class="pos">2</span> 🛡️ UNIÃO ZN</td>
+                            <td>10</td><td>4</td><td>3</td><td>1</td><td>0</td><td>9</td><td>3</td><td>6</td>
                         </tr>
                         <tr>
-                            <td>2 🥈 União ZN</td>
-                            <td>10</td>
-                            <td>4</td>
-                            <td>3</td>
-                            <td>6</td>
+                            <td class="text-left"><span class="pos">3</span> 🛡️ REAL NORTE</td>
+                            <td>9</td><td>4</td><td>3</td><td>0</td><td>1</td><td>8</td><td>4</td><td>4</td>
                         </tr>
                         <tr>
-                            <td>3 🥉 Real Norte</td>
-                            <td>9</td>
-                            <td>4</td>
-                            <td>1</td>
-                            <td>4</td>
+                            <td class="text-left"><span class="pos">4</span> 🛡️ VILA NOVA</td>
+                            <td>7</td><td>4</td><td>2</td><td>1</td><td>1</td><td>7</td><td>5</td><td>2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><span class="pos">5</span> 🛡️ INDEPENDENTE</td>
+                            <td>6</td><td>4</td><td>2</td><td>0</td><td>2</td><td>6</td><td>6</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><span class="pos">6</span> 🛡️ NOVA ERA</td>
+                            <td>4</td><td>4</td><td>1</td><td>1</td><td>2</td><td>4</td><td>6</td><td>-2</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
+        </div>
+
+        <div class="box dynamic-card">
+            <div class="box-header">
+                <h2>Artilharia</h2>
+                <a href="#" class="see-all">Ver todos ></a>
+            </div>
+            
+            <div class="player-row">
+                <div class="player-info">
+                    <div class="avatar">👦</div>
+                    <div>
+                        <div class="player-name">Lucas Silva</div>
+                        <div class="player-team">Fúria FC</div>
+                    </div>
+                </div>
+                <div class="goals-count">7 <small>GOLS</small></div>
+            </div>
+
+            <div class="player-row">
+                <div class="player-info">
+                    <div class="avatar">👦</div>
+                    <div>
+                        <div class="player-name">Matheus Alves</div>
+                        <div class="player-team">União ZN</div>
+                    </div>
+                </div>
+                <div class="goals-count">5 <small>GOLS</small></div>
+            </div>
+
+            <div class="player-row">
+                <div class="player-info">
+                    <div class="avatar">👦</div>
+                    <div>
+                        <div class="player-name">Gabriel Santos</div>
+                        <div class="player-team">Real Norte</div>
+                    </div>
+                </div>
+                <div class="goals-count">4 <small>GOLS</small></div>
+            </div>
+        </div>
+
+        <div class="box dynamic-card sub-grid-container">
+            <div class="box-header">
+                <h2>Notícias em Destaque</h2>
+                <a href="#" class="see-all">Ver todas ></a>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-thumb">⚽</div>
+                    <div class="news-body">
+                        <small>22 MAI</small>
+                        <h3>CCSP Norte terá início no dia 15 de Junho</h3>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-thumb">🏆</div>
+                    <div class="news-body">
+                        <small>18 MAI</small>
+                        <h3>Inscrições abertas para equipes da Zona Norte</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>Sobre a CCSP Norte</h3>
-                <p>A Copa Capital São Paulo Norte é mais que uma competição, é a celebração do esporte e da união regional.</p>
+    <section class="sponsors-section">
+        <p class="sponsors-title">PATROCINADORES OFICIAIS</p>
+        <div class="sponsors-logos">
+            <div class="sponsor-logo">ICONE</div>
+            <div class="sponsor-logo gold-accent">ESTRELA BET</div>
+            <div class="sponsor-logo">SOCCER GRASS</div>
+            <div class="sponsor-logo">KX SPORTS</div>
+            <div class="sponsor-logo">LED ENERGY</div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <img src="https://via.placeholder.com/80x80/000000/00ff66?text=CCSP" alt="Logo Footer" class="footer-logo">
+                <h3>SOBRE A CCSP NORTE</h3>
+                <p>A Copa Capital São Paulo Norte é mais que uma competição, é a celebração do esporte, da união e da paixão pela nossa região.</p>
+                <p class="copy-text">&copy; 2026 CCSP Norte - Todos os direitos reservados.</p>
             </div>
-            <div class="footer-links">
-                <h3>Links Rápidos</h3>
+            
+            <div class="footer-col">
+                <h3>LINKS RÁPIDOS</h3>
                 <ul>
                     <li><a href="#">Início</a></li>
+                    <li><a href="#">Competição</a></li>
+                    <li><a href="#">Equipes</a></li>
+                    <li><a href="#">Atletas</a></li>
                     <li><a href="#">Classificação</a></li>
-                    <li><a href="#">Notícias</a></li>
                 </ul>
             </div>
-            <div class="footer-contact">
-                <h3>Contato</h3>
+
+            <div class="footer-col">
+                <h3>REDES SOCIAIS</h3>
+                <ul>
+                    <li><a href="#">📸 Instagram</a></li>
+                    <li><a href="#">🎥 YouTube</a></li>
+                    <li><a href="#">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>CONTATO</h3>
                 <p>📞 (11) 91234-5678</p>
                 <p>✉️ contato@ccspnorte.com.br</p>
+                <p>📍 Zona Norte - São Paulo/SP</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 CCSP Norte - Todos os direitos reservados.</p>
         </div>
     </footer>
 
