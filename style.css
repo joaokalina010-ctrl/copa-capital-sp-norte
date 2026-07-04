@@ -1,24 +1,42 @@
-/* CONFIGURAÇÕES GERAIS */
+/* IMPORTANDO FONTES MAIS MODERNAS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #0b0f0a; /* Fundo bem escuro puxado pro verde da imagem */
+    background-color: #050805;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* BACKGROUND BRILHANTE (Efeito de luz verde no fundo) */
+body::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 102, 0.15) 0%, rgba(0,0,0,0) 70%);
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* NAVBAR UPGRADE */
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(11, 15, 10, 0.95);
-    padding: 15px;
-    border-bottom: 1px solid #1a2e1a;
+    background: rgba(5, 8, 5, 0.85);
+    backdrop-filter: blur(10px); /* Efeito de vidro borrado */
+    padding: 10px 40px;
+    border-bottom: 1px solid rgba(0, 255, 102, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,245 +44,294 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #a3a3a3;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
 }
 
 .nav-links a.active, .nav-links a:hover {
-    color: #00ff66; /* Verde Neon do destaque */
+    color: #00ff66;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
 }
 
 .logo img {
-    height: 70px; /* Ajuste conforme sua imagem */
+    height: 85px;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 102, 0.3));
 }
 
-/* HERO SECTION (BANNER PRINCIPAL) */
+/* HERO SECTION PRO */
 .hero {
-    background: linear-gradient(to bottom, rgba(11,15,10,0.3), #0b0f0a), url('seu-fundo-futebol.jpg') no-repeat center center/cover;
-    height: 85vh;
+    background: linear-gradient(to bottom, rgba(5, 8, 5, 0.2), #050805), url('seu-fundo-futebol.jpg') no-repeat center center/cover;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .hero-content h3 {
     color: #00ff66;
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
 .hero-content h1 {
-    font-size: 55px;
+    font-size: 65px;
     font-weight: 900;
-    line-height: 1.1;
-    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 .hero-content h1 span {
-    color: #cca43b; /* Dourado do texto */
+    color: #cca43b;
+    background: linear-gradient(45deg, #ffe082, #cca43b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
-    margin: 15px 0;
-    font-size: 18px;
-    color: #b3b3b3;
+    margin: 20px 0 35px;
+    font-size: 16px;
+    color: #e0e0e0;
+    letter-spacing: 0.5px;
 }
 
-/* BOTÕES */
-.hero-buttons .btn-green {
-    background-color: #00ff66;
-    color: #000;
-    padding: 12px 25px;
-    text-decoration: none;
+.hero-content p span {
+    color: #00ff66;
     font-weight: bold;
-    border-radius: 5px;
+}
+
+/* BOTÕES ESTILIZADOS */
+.hero-buttons .btn-green {
+    background: linear-gradient(90deg, #00ff66, #00cc52);
+    color: #000;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
     margin-right: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 102, 0.4);
+    transition: 0.3s;
     display: inline-block;
+}
+
+.hero-buttons .btn-green:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 255, 102, 0.6);
 }
 
 .hero-buttons .btn-outline {
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     color: #fff;
-    padding: 12px 25px;
+    padding: 12px 30px;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+    font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: 0.3s;
     display: inline-block;
 }
 
-/* CONTADOR */
+.hero-buttons .btn-outline:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* CONTADOR AVANÇADO */
 .countdown-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid #cca43b;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 40px;
+    background: rgba(18, 26, 18, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(204, 164, 59, 0.3);
+    padding: 20px 40px;
+    border-radius: 6px;
+    margin-top: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .countdown-title {
-    font-size: 11px;
+    font-size: 10px;
     color: #cca43b;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
 }
 
 .countdown {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
 .time-box {
     display: flex;
     flex-direction: column;
-    font-size: 22px;
-    font-weight: bold;
+    align-items: center;
+}
+
+.time-box span {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
 }
 
 .time-box small {
     font-size: 9px;
-    color: #a3a3a3;
+    color: #888;
+    margin-top: 5px;
+    letter-spacing: 1px;
 }
 
-/* GRID DE CONTEÚDO */
+/* CARDS E GRIDS (Efeito Glassmorphism da Imagem) */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .dynamic-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.3fr; /* Tabela um pouco mais larga que os jogos */
     gap: 30px;
 }
 
 .box {
-    background-color: #121812;
-    border: 1px solid #1f2e1f;
+    background: linear-gradient(135deg, rgba(20, 30, 20, 0.6) 0%, rgba(10, 15, 10, 0.8) 100%);
+    border: 1px solid rgba(0, 255, 102, 0.1);
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
 .box-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #1f2e1f;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .box-header h2 {
-    font-size: 18px;
-    color: #00ff66;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pequeno detalhe verde antes do título do card */
+.box-header h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background-color: #00ff66;
+    border-radius: 2px;
 }
 
 .box-header a {
-    color: #a3a3a3;
-    font-size: 12px;
+    color: #00ff66;
+    font-size: 11px;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* LINHAS DE JOGOS */
+/* JOGOS ESTILIZADOS */
 .game-row {
     display: flex;
     align-items: center;
-    background-color: #1a221a;
-    padding: 12px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255,255,255,0.02);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.game-row:hover {
+    background: rgba(0, 255, 102, 0.05);
+    border-color: rgba(0, 255, 102, 0.2);
 }
 
 .game-row .date {
-    font-size: 12px;
+    font-size: 11px;
     color: #00ff66;
-    font-weight: bold;
-    border-right: 1px solid #334e33;
+    font-weight: 700;
+    border-right: 1px solid rgba(255,255,255,0.1);
     padding-right: 15px;
     text-align: center;
+    line-height: 1.3;
 }
 
 .game-row .hour {
-    font-weight: bold;
-    padding: 0 15px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 20px;
+    color: #cca43b;
 }
 
 .matchup {
     flex-grow: 1;
     display: flex;
-    justify-content: space-around;
-    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    padding-right: 20px;
 }
 
 .vs {
+    background: rgba(204, 164, 59, 0.1);
     color: #cca43b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
 }
 
-/* TABELA DE CLASSIFICAÇÃO */
+/* TABELA DE CLASSIFICAÇÃO PREMIUM */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
 th {
-    color: #cca43b;
-    font-size: 12px;
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-tr {
-    border-bottom: 1px solid #1a221a;
+td {
+    padding: 14px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.02);
 }
 
-/* RODAPÉ */
-footer {
-    background-color: #070a07;
-    padding: 40px 20px 20px;
-    border-top: 1px solid #1f2e1f;
-    margin-top: 60px;
+tr:hover td {
+    background: rgba(255,255,255,0.01);
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.footer-container h3 {
-    color: #cca43b;
-    margin-bottom: 15px;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links a {
-    color: #b3b3b3;
-    text-decoration: none;
-    line-height: 2;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 40px;
-    border-top: 1px solid #121812;
-    padding-top: 20px;
-    font-size: 12px;
-    color: #666;
+/* Realce para os primeiros colocados (G4) */
+tr:nth-child(1) td:first-child,
+tr:nth-child(2) td:first-child {
+    color: #00ff66;
 }
