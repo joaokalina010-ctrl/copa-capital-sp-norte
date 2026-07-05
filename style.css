@@ -1,58 +1,5 @@
 /* IMPORTANDO FONTES MAIS MODERNAS */
 @import
-/* BARRA DE NAVEGAÇÃO (Ajustada para centralizar o escudo) */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(3, 6, 3, 0.95);
-    backdrop-filter: blur(12px);
-    padding: 5px 6%;
-    border-bottom: 1px solid rgba(0, 255, 102, 0.08);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    height: 90px; /* Altura fixa para acomodar os links e o escudo */
-}
-
-/* Novo container específico para a logo centralizada */
-.logo-central {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1001;
-}
-
-/* Ajustes de tamanho e brilho do escudo */
-.logo-central img {
-    height: 110px; /* Deixa o escudo imponente, sobressaindo um pouco a barra */
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 15px rgba(0, 255, 102, 0.25)); /* Glow sutil no fundo */
-    transition: transform 0.3s ease;
-}
-
-/* Efeito ao passar o mouse por cima do escudo */
-.logo-central img:hover {
-    transform: scale(1.05);
-}
- url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    background-color: #050805;
-    color: #ffffff;
-    overflow-x: hidden;
-}
-
 /* BACKGROUND BRILHANTE (Efeito de luz verde no fundo) */
 body::before {
     content: '';
